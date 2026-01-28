@@ -1,0 +1,337 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 20% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 76% 45%;
+    --primary-foreground: 220 20% 6%;
+
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 0 84% 55%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 142 76% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --hacker-red: 0 84% 55%;
+    --hacker-red-glow: 0 100% 60%;
+    --defender-green: 142 76% 45%;
+    --defender-green-glow: 142 100% 55%;
+    --defender-blue: 210 100% 55%;
+    --warning-yellow: 45 100% 55%;
+    --cyber-purple: 270 70% 55%;
+
+    /* Gradients */
+    --gradient-red: linear-gradient(135deg, hsl(0, 84%, 55%), hsl(350, 90%, 40%));
+    --gradient-green: linear-gradient(135deg, hsl(142, 76%, 45%), hsl(160, 80%, 35%));
+    --gradient-blue: linear-gradient(135deg, hsl(210, 100%, 55%), hsl(230, 90%, 45%));
+    --gradient-dark: linear-gradient(180deg, hsl(220, 20%, 8%), hsl(220, 20%, 4%));
+    --gradient-card: linear-gradient(145deg, hsl(220, 20%, 12%), hsl(220, 20%, 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(220, 20%, 6%) 0%, hsl(220, 25%, 10%) 50%, hsl(220, 20%, 6%) 100%);
+
+    /* Shadows */
+    --shadow-red: 0 0 30px hsl(0, 84%, 55%, 0.3);
+    --shadow-green: 0 0 30px hsl(142, 76%, 45%, 0.3);
+    --shadow-card: 0 4px 24px hsl(0, 0%, 0%, 0.4);
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 142 76% 45%;
+    --sidebar-primary-foreground: 220 20% 6%;
+    --sidebar-accent: 220 20% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 142 76% 45%;
+  }
+
+  .dark {
+    --background: 220 20% 6%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .cyber-card {
+    @apply bg-card border border-border rounded-lg p-6 transition-all duration-300;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  .cyber-card:hover {
+    @apply border-primary/50;
+    box-shadow: var(--shadow-green);
+  }
+
+  .hacker-card {
+    @apply bg-card border border-border rounded-lg p-6 transition-all duration-300;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  .hacker-card:hover {
+    @apply border-accent/50;
+    box-shadow: var(--shadow-red);
+  }
+
+  .stat-card {
+    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6;
+    background: linear-gradient(145deg, hsl(220, 20%, 10%, 0.8), hsl(220, 20%, 6%, 0.8));
+  }
+
+  .gradient-text-red {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-red);
+  }
+
+  .gradient-text-green {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-green);
+  }
+
+  .gradient-text-blue {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-blue);
+  }
+
+  .glow-red {
+    box-shadow: var(--shadow-red);
+  }
+
+  .glow-green {
+    box-shadow: var(--shadow-green);
+  }
+
+  .cyber-button {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105;
+  }
+
+  .cyber-button-red {
+    @apply cyber-button text-white;
+    background: var(--gradient-red);
+    box-shadow: 0 4px 15px hsl(0, 84%, 55%, 0.4);
+  }
+
+  .cyber-button-red:hover {
+    box-shadow: 0 6px 25px hsl(0, 84%, 55%, 0.6);
+  }
+
+  .cyber-button-green {
+    @apply cyber-button text-background;
+    background: var(--gradient-green);
+    box-shadow: 0 4px 15px hsl(142, 76%, 45%, 0.4);
+  }
+
+  .cyber-button-green:hover {
+    box-shadow: 0 6px 25px hsl(142, 76%, 45%, 0.6);
+  }
+
+  .floating-icon {
+    @apply fixed z-50 w-11 h-11 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 transform hover:scale-110;
+  }
+
+  .floating-icon-red {
+    @apply floating-icon;
+    background: var(--gradient-red);
+    box-shadow: 0 0 15px hsl(0, 84%, 55%, 0.5);
+  }
+
+  .floating-icon-blue {
+    @apply floating-icon;
+    background: var(--gradient-green);
+    box-shadow: 0 0 15px hsl(142, 76%, 45%, 0.5);
+  }
+
+  .animate-blink {
+    animation: blink 8s ease-in-out infinite;
+  }
+
+  .roadmap-node {
+    @apply relative p-4 rounded-lg border-2 transition-all duration-500;
+  }
+
+  .roadmap-node-active {
+    @apply border-primary bg-primary/10;
+    box-shadow: 0 0 20px hsl(142, 76%, 45%, 0.3);
+  }
+
+  .roadmap-node-inactive {
+    @apply border-muted bg-muted/20 opacity-50;
+  }
+
+  .roadmap-node-attack {
+    @apply border-accent bg-accent/10;
+    box-shadow: 0 0 20px hsl(0, 84%, 55%, 0.3);
+  }
+
+  .terminal-window {
+    @apply bg-black/90 rounded-lg border border-border overflow-hidden;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .terminal-header {
+    @apply flex items-center gap-2 px-4 py-2 bg-muted/30 border-b border-border;
+  }
+
+  .terminal-dot {
+    @apply w-3 h-3 rounded-full;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-muted-foreground max-w-2xl;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-red {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(0, 84%, 55%, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 35px hsl(0, 84%, 55%, 0.8);
+  }
+}
+
+@keyframes pulse-green {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(142, 76%, 45%, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 35px hsl(142, 76%, 45%, 0.8);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+  to {
+    text-shadow: 0 0 20px currentColor, 0 0 40px currentColor;
+  }
+}
+
+@keyframes blink {
+  0%, 45% {
+    opacity: 1;
+    visibility: visible;
+  }
+  50%, 95% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.typing-effect {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(40, end);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(220, 20%, 8%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(220, 20%, 25%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(142, 76%, 45%);
+}
