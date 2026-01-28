@@ -13,12 +13,12 @@ import {
 } from 'lucide-react';
 
 const links = [
-  { icon: Globe, label: 'Portfolio', url: '#', color: 'text-primary' },
-  { icon: Github, label: 'GitHub', url: '#', color: 'text-foreground' },
-  { icon: Linkedin, label: 'LinkedIn', url: '#', color: 'text-blue-500' },
+  { icon: Globe, label: 'Portfolio', url: 'https://smozhivarman-portfolio.netlify.app/', color: 'text-primary' },
+  { icon: Github, label: 'GitHub', url: 'https://www.github.com/SMOZHIVARMAN', color: 'text-foreground' },
+  { icon: Linkedin, label: 'LinkedIn', url: 'https://www.linkedin.com/in/mozhivarmanofficial', color: 'text-blue-500' },
   { icon: Instagram, label: 'Instagram', url: '#', color: 'text-pink-500' },
-  { icon: Mail, label: 'Email', url: 'mailto:contact@example.com', color: 'text-accent' },
-  { icon: Phone, label: 'Phone', url: 'tel:+1234567890', color: 'text-primary' },
+  { icon: Mail, label: 'Email', url: 'mailto:mozhivarmanofficial@gmail.com.com', color: 'text-accent' },
+  { icon: Phone, label: 'Phone', url: 'tel:+918124150569', color: 'text-primary' },
 ];
 
 const values = [
@@ -135,6 +135,8 @@ export default function About() {
                     <a
                       key={link.label}
                       href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-border hover:border-primary/50 transition-all group"
                     >
                       <Icon className={`w-5 h-5 ${link.color}`} />
@@ -149,6 +151,8 @@ export default function About() {
               <div className="inline-block">
                 <a 
                   href="mailto:contact@example.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="cyber-button-green inline-flex items-center gap-2"
                 >
                   <Mail className="w-5 h-5" />
