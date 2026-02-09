@@ -20,16 +20,34 @@ export function Footer() {
               interactive simulations and visual demonstrations.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
+  <a
+    href="https://www.github.com/SMOZHIVARMAN"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-muted-foreground hover:text-primary transition-colors"
+  >
+    <Github className="w-5 h-5" />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/mozhivarmanofficial"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-muted-foreground hover:text-primary transition-colors"
+  >
+    <Linkedin className="w-5 h-5" />
+  </a>
+
+  <a
+    href="mailto:mozhivarmanofficial@gmail.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-muted-foreground hover:text-primary transition-colors"
+  >
+    <Mail className="w-5 h-5" />
+  </a>
+</div>
+
           </div>
 
           {/* Quick Links */}

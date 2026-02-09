@@ -65,16 +65,22 @@ export default function About() {
             <div className="cyber-card mb-12">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 {/* Avatar */}
-                <div className="relative">
-                  <div className="w-40 h-40 rounded-full bg-gradient-to-br from-primary to-accent p-1">
-                    <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
-                      <Shield className="w-16 h-16 text-primary" />
-                    </div>
-                  </div>
-                  <div className="absolute -bottom-2 -right-2 w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                    <Target className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                </div>
+<div className="relative">
+  <div className="w-40 h-40 rounded-full bg-gradient-to-br from-primary to-accent p-1">
+    <div className="w-full h-full rounded-full bg-card overflow-hidden">
+      <img
+        src="https://res.cloudinary.com/dn3e0hr3y/image/upload/v1770562664/Suite_wkeeg9.jpg"
+        alt="Profile"
+        className="w-full h-full object-cover rounded-full"
+      />
+    </div>
+  </div>
+
+  <div className="absolute -bottom-2 -right-2 w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+    <Target className="w-6 h-6 text-primary-foreground" />
+  </div>
+</div>
+
 
                 {/* Bio */}
                 <div className="flex-1 text-center md:text-left">
