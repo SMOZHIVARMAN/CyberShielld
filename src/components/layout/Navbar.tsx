@@ -9,6 +9,7 @@ const navLinks = [
   { name: 'Hacker Mode', path: '/hacker' },
   { name: 'Defender Mode', path: '/defender' },
   { name: 'Phishing', path: '/phishing' },
+  { name: 'Security Lab', path: '/security-lab' },
   { name: 'About', path: '/about' },
 ];
 

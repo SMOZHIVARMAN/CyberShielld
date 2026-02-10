@@ -10,6 +10,7 @@ import Defender from "./pages/Defender";
 import Phishing from "./pages/Phishing";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import SecurityLab from "./pages/SecurityLab"; // Import the new SecurityLab component
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/defender" element={<Defender />} />
           <Route path="/phishing" element={<Phishing />} />
           <Route path="/about" element={<About />} />
+          <Route path="/security-lab" element={<SecurityLab />} /> {/* New route for Security Lab */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
