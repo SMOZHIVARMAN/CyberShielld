@@ -1,5 +1,4 @@
 import { Layout } from '@/components/layout/Layout';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Lock, Target } from 'lucide-react';
 
@@ -8,12 +7,33 @@ export default function SecurityLab() {
     <Layout>
       <section className="relative py-16 lg:py-24 overflow-hidden">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 gradient-text-blue animate-slide-up">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 gradient-text-red animate-slide-up">
             DVWA Security Lab
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
+          <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
             Learn real-world web attacks in a safe, ethical environment
           </p>
+          {/* Buttons moved here */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 mb-16 animate-fade-in" style={{ animationDelay: '250ms' }}>
+            <a
+              href="https://github.com/SMOZHIVARMAN/dvwa-security-lab"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cyber-button-red flex items-center justify-center gap-2"
+            >
+              <Target className="w-5 h-5" />
+              Start Lab (GitHub)
+            </a>
+            <a
+              href="https://www.linkedin.com/posts/mozhivarmanofficial_cybersecurity-ethicalhacking-dvwa-ugcPost-7423387594538819584-glsS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cyber-button-green flex items-center justify-center gap-2"
+            >
+              <Lock className="w-5 h-5" />
+              View Lab Info (LinkedIn)
+            </a>
+          </div>
         </div>
       </section>
 
@@ -35,7 +55,7 @@ export default function SecurityLab() {
 
           {/* Why This Exists Section */}
           <div className="mb-16 animate-fade-in" style={{ animationDelay: '350ms' }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-accent">DVWA Security Lab – Why This Exists</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text-blue">DVWA Security Lab – Why This Exists</h2>
 
             {/* Why This Lab Was Created */}
             <h3 className="text-2xl font-bold mb-4 text-primary">Why This Lab Was Created</h3>
@@ -49,7 +69,7 @@ export default function SecurityLab() {
               is absolutely essential for building robust and resilient defenses.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Our aim is to promote ethical hacking and responsible security practices, empowering individuals
+              My aim is to promote ethical hacking and responsible security practices, empowering individuals
               with practical knowledge and fostering a community dedicated to cyber defense. This lab helps replace fear and misinformation
               with clear, actionable insights into web security.
             </p>
@@ -82,13 +102,13 @@ export default function SecurityLab() {
             </ul>
 
             {/* Ethical & Legal Emphasis */}
-            <Card className="border-accent/50 bg-accent/10 text-accent-foreground mt-10">
+            <Card className="border-yellow-500/50 bg-yellow-500/10 text-yellow-400 mt-10">
               <CardHeader>
-                <CardTitle className="text-accent-foreground flex items-center gap-2">
+                <CardTitle className="text-yellow-300 flex items-center gap-2">
                   Ethical & Legal Emphasis
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-accent-foreground/90">
+              <CardContent className="text-yellow-400/90">
                 <p className="mb-2">
                   It is paramount that this lab is ONLY used within the provided vulnerable environment, strictly for educational purposes.
                 </p>
@@ -105,7 +125,7 @@ export default function SecurityLab() {
 
           {/* What You Will Learn Section */}
           <div className="mb-16 animate-fade-in" style={{ animationDelay: '400ms' }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-accent">What You Will Learn</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text-green">What You Will Learn</h2>
             <p className="text-lg text-muted-foreground mb-4">
               The lab covers a wide array of web application security flaws, allowing hands-on experience with:
             </p>
@@ -121,7 +141,7 @@ export default function SecurityLab() {
 
           {/* How to Use the Lab Section */}
           <div className="mb-16 animate-fade-in" style={{ animationDelay: '500ms' }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">How to Use the Lab</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text-blue">How to Use the Lab</h2>
             <ol className="list-decimal list-inside text-lg text-muted-foreground space-y-3 pl-4">
               <li>
                 <span className="text-foreground font-medium">Setup DVWA:</span> Follow the instructions on the official DVWA GitHub repository to set up your own local instance of the vulnerable web application.
@@ -143,16 +163,16 @@ export default function SecurityLab() {
 
           {/* Ethical & Legal Disclaimer Section */}
           <div className="animate-fade-in" style={{ animationDelay: '600ms' }}>
-            <Card className="border-destructive/50 bg-destructive/10 text-destructive-foreground">
+            <Card className="border-red-500/50 bg-red-500/10 text-red-400">
               <CardHeader>
-                <CardTitle className="text-destructive-foreground flex items-center gap-2">
+                <CardTitle className="text-red-300 flex items-center gap-2">
                   <Lock className="w-6 h-6" /> Ethical & Legal Disclaimer
                 </CardTitle>
-                <CardDescription className="text-destructive-foreground/80">
+                <CardDescription className="text-red-400/80">
                   Please read carefully before proceeding.
                 </CardDescription>
               </CardHeader>
-              <CardContent className="text-destructive-foreground/90">
+              <CardContent className="text-red-400/90">
                 <p className="mb-4">
                   This Security Lab is provided for educational purposes ONLY. Any actions taken using the knowledge
                   gained from this lab are your sole responsibility. The creators and maintainers of this platform
@@ -167,28 +187,6 @@ export default function SecurityLab() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-16 animate-fade-in" style={{ animationDelay: '700ms' }}>
-            <a
-              href="https://github.com/SMOZHIVARMAN/dvwa-security-lab"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cyber-button-red flex items-center justify-center gap-2"
-            >
-              <Target className="w-5 h-5" />
-              Start Lab (GitHub)
-            </a>
-            <a
-              href="https://www.linkedin.com/posts/mozhivarmanofficial_cybersecurity-ethicalhacking-dvwa-ugcPost-7423387594538819584-glsS"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cyber-button-green flex items-center justify-center gap-2"
-            >
-              <Lock className="w-5 h-5" />
-              View Lab Info (LinkedIn)
-            </a>
           </div>
         </div>
       </section>
