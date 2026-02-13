@@ -16,7 +16,7 @@ const links = [
   { icon: Globe, label: 'Portfolio', url: 'https://mozhivarmanofficial-portfolio.netlify.app/', color: 'text-primary' },
   { icon: Github, label: 'GitHub', url: 'https://www.github.com/SMOZHIVARMAN', color: 'text-foreground' },
   { icon: Linkedin, label: 'LinkedIn', url: 'https://www.linkedin.com/in/mozhivarmanofficial', color: 'text-blue-500' },
-  { icon: Instagram, label: 'Instagram', url: '#', color: 'text-pink-500' },
+  { icon: Instagram, label: 'Instagram', url: 'https://www.instagram.com/iam_ur_skm_69/', color: 'text-pink-500' },
   { icon: Mail, label: 'Email', url: 'mailto:mozhivarmanofficial@gmail.com.com', color: 'text-accent' },
   { icon: Phone, label: 'Phone', url: 'tel:+918124150569', color: 'text-primary' },
 ];
